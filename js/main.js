@@ -51,3 +51,27 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Email addresses are put together here so they never appear in the page source for scrapers.
+function emailAddress(el) {
+  return `${el.dataset.emailUser}@${el.dataset.emailDomain}`;
+}
+
+document.querySelectorAll('a[data-email-user]').forEach(link => {
+  const address = emailAddress(link);
+  link.href = `mailto:${address}`;
+  link.textContent = address;
+});
+
+// Account deletion request: opens the visitor's email app with the request filled in.
+const deleteForm = document.querySelector('.delete-form');
+
+if (deleteForm) {
+  deleteForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const accountEmail = deleteForm.elements.email.value.trim();
+    const subject = encodeURIComponent(deleteForm.dataset.emailSubject);
+    const body = encodeURIComponent(`Please permanently delete the Parent Room Finder account for ${accountEmail}.`);
+    window.location.href = `mailto:${emailAddress(deleteForm)}?subject=${subject}&body=${body}`;
+  });
+}

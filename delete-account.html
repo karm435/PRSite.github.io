@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Your Account - Parent Room Finder</title>
+  <meta name="description" content="Delete your Parent Room Finder account in the app or by request, and what happens to your information.">
+  <link rel="icon" type="image/png" href="images/App Icon - light.png">
+  <link rel="apple-touch-icon" href="images/App Icon - light.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <img src="images/App Icon - light.png" alt="Parent Room Finder" width="40" height="40">
+        <span>Parent Room Finder</span>
+      </a>
+      <button class="header__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="header__nav">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="index.html#download" class="btn btn--primary btn--small">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Delete Account ===== -->
+  <main class="legal-page">
+    <div class="container container--prose">
+
+      <h1>Delete Your Account</h1>
+
+      <p>The quickest way is in the app: open <strong>Account</strong> and tap <strong>Delete account</strong>. Your account is deleted straight away.</p>
+
+      <h2>Without the app</h2>
+      <p>If you no longer have the app, send us a request here. We&rsquo;ll reply to confirm it&rsquo;s your account, and aim to delete it within 30 days.</p>
+
+      <form class="delete-form" data-email-user="info" data-email-domain="karmafy.com.au" data-email-subject="Parent Room Finder account deletion request">
+        <label for="delete-email">Email address on your account</label>
+        <input id="delete-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+        <label class="delete-form__confirm">
+          <input type="checkbox" name="confirm" required>
+          <span>I understand my account will be permanently deleted.</span>
+        </label>
+        <button type="submit" class="btn btn--primary">Email deletion request</button>
+        <p class="delete-form__note">This opens your email app with the request filled in.</p>
+      </form>
+      <noscript>
+        <p>Email us at info at karmafy dot com dot au with the subject &ldquo;Account deletion request&rdquo; and the email address on your account.</p>
+      </noscript>
+
+      <h2>What&rsquo;s deleted</h2>
+      <ul>
+        <li>Your account and your Apple or Google sign-in link</li>
+        <li>Your saved rooms, reviews, comments, and reports</li>
+        <li>Photos you uploaded</li>
+      </ul>
+
+      <h2>What stays</h2>
+      <ul>
+        <li>Rooms you shared stay listed without your name, so other parents can still find them.</li>
+        <li>Search history is kept without any link to you.</li>
+        <li>Support subscriptions are managed by Apple or Google, and deleting your account doesn&rsquo;t cancel them. Cancel in your App Store or Google Play settings.</li>
+      </ul>
+
+      <p>See our <a href="privacy.html">Privacy Policy</a> for more about how we handle your information.</p>
+
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="images/App Icon - dark.png" alt="Parent Room Finder" width="40" height="40">
+          <p>Helping parents find clean, safe, and accessible parent rooms across Australia. Built with love by parents, for parents.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#download">Download</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="delete-account.html">Delete Account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a class="email-link" href="#" data-email-user="info" data-email-domain="karmafy.com.au">info at karmafy dot com dot au</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Karmafy. All rights reserved.</span>
+        <span>Made with care in Australia</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
