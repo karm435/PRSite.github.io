@@ -1,56 +1,53 @@
-// Mobile hamburger toggle
+// Header: part of the yellow hero at the top of the home page, frosted once the page scrolls.
+const header = document.querySelector('.header');
+
+if (header) {
+  const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+}
+
+// Mobile menu
 const hamburger = document.querySelector('.header__hamburger');
 const nav = document.querySelector('.header__nav');
 
 if (hamburger && nav) {
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
-  });
+  const setOpen = open => {
+    nav.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+  };
 
-  // Close nav when clicking a link
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    });
+  hamburger.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+
+  // Close the menu after following a link or pressing Escape.
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) {
+      setOpen(false);
+      hamburger.focus();
+    }
   });
 }
 
-// FAQ accordion
-document.querySelectorAll('.faq__question').forEach(button => {
-  button.addEventListener('click', () => {
-    const expanded = button.getAttribute('aria-expanded') === 'true';
-    const answer = button.nextElementSibling;
+// Scroll-triggered reveal. Content is visible without JS; see .js .reveal in style.css.
+const revealed = document.querySelectorAll('.reveal');
 
-    // Close all
-    document.querySelectorAll('.faq__question').forEach(btn => {
-      btn.setAttribute('aria-expanded', 'false');
-      btn.nextElementSibling.style.maxHeight = null;
-    });
-
-    // Open clicked (if was closed)
-    if (!expanded) {
-      button.setAttribute('aria-expanded', 'true');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
-  });
-});
-
-// Scroll-triggered fade-in
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+  revealed.forEach(el => observer.observe(el));
+} else {
+  revealed.forEach(el => el.classList.add('is-visible'));
+}
 
 // Email addresses are put together here so they never appear in the page source for scrapers.
 function emailAddress(el) {
@@ -71,7 +68,7 @@ if (deleteForm) {
     event.preventDefault();
     const accountEmail = deleteForm.elements.email.value.trim();
     const subject = encodeURIComponent(deleteForm.dataset.emailSubject);
-    const body = encodeURIComponent(`Please permanently delete the Parent Room Finder account for ${accountEmail}.`);
+    const body = encodeURIComponent(`Please permanently delete the Parents Room Finder account for ${accountEmail}.`);
     window.location.href = `mailto:${emailAddress(deleteForm)}?subject=${subject}&body=${body}`;
   });
 }
