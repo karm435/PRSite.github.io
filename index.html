@@ -1,445 +1,200 @@
 <!DOCTYPE html>
 <html lang="en-AU">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Parent Room Finder - Find Parent &amp; Nursing Rooms Nearby</title>
-  <meta name="description" content="Find parent rooms, nursing rooms, and baby change facilities near you. Community-powered details, photos, ratings and reviews across Australia.">
-  <link rel="canonical" href="https://parentsroom.app/">
-  <meta name="theme-color" content="#FFCC00">
-  <meta name="color-scheme" content="light dark">
-  <meta name="apple-itunes-app" content="app-id=6752860624">
-
-  <!-- Open Graph / social -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Parents Room Finder">
-  <meta property="og:locale" content="en_AU">
-  <meta property="og:url" content="https://parentsroom.app/">
-  <meta property="og:title" content="Parent Room Finder - Find Parent &amp; Nursing Rooms Nearby">
-  <meta property="og:description" content="Community-powered app to find parent rooms, nursing rooms, and baby change facilities near you.">
-  <meta property="og:image" content="https://parentsroom.app/images/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Parents Room Finder: Nappy emergency? Find the nearest parents room quickly.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Parent Room Finder - Find Parent &amp; Nursing Rooms Nearby">
-  <meta name="twitter:description" content="Community-powered app to find parent rooms, nursing rooms, and baby change facilities near you.">
-  <meta name="twitter:image" content="https://parentsroom.app/images/og-image.png">
-
-  <!-- Icons -->
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Schibsted+Grotesk:wght@700;800&amp;display=swap">
-  <link rel="stylesheet" href="/css/style.css">
-  <script>document.documentElement.classList.add('js')</script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://parentsroom.app/#website",
-        "url": "https://parentsroom.app/",
-        "name": "Parents Room Finder",
-        "alternateName": ["Parent Room Finder", "Parents Room"],
-        "inLanguage": "en-AU",
-        "publisher": { "@id": "https://parentsroom.app/#organization" }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://parentsroom.app/#organization",
-        "name": "Karmafy",
-        "url": "https://parentsroom.app/"
-      },
-      {
-        "@type": "MobileApplication",
-        "@id": "https://parentsroom.app/#app",
-        "name": "Parents Room Finder",
-        "alternateName": "Parent Room Finder",
-        "description": "Find parent rooms, nursing rooms, and baby change facilities near you, with community-powered details, photos, ratings and reviews across Australia.",
-        "url": "https://parentsroom.app/",
-        "installUrl": "https://apps.apple.com/app/id6752860624",
-        "sameAs": ["https://apps.apple.com/au/app/parents-room-finder-app/id6752860624"],
-        "operatingSystem": "iOS",
-        "applicationCategory": "LifestyleApplication",
-        "countriesSupported": "AU",
-        "image": "https://parentsroom.app/images/app-icon-512.png",
-        "screenshot": [
-          "https://parentsroom.app/images/screenshots/01-find-the-nearest-parents-room-720.webp",
-          "https://parentsroom.app/images/screenshots/02-know-whats-inside-720.webp",
-          "https://parentsroom.app/images/screenshots/03-reviews-from-real-parents-720.webp",
-          "https://parentsroom.app/images/screenshots/04-saved-rooms-work-offline-720.webp",
-          "https://parentsroom.app/images/screenshots/05-share-a-room-720.webp"
-        ],
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
-        "publisher": { "@id": "https://parentsroom.app/#organization" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://parentsroom.app/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is Parents Room Finder free to use?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes! Parents Room Finder is completely free to use. You get the interactive map, room details, photos, reviews, and the ability to save favourites and share rooms, at no cost. If you'd like to support the app you can, but it doesn't unlock anything extra." }
-          },
-          {
-            "@type": "Question",
-            "name": "How accurate is the room information?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Room information is contributed by our community of parents, supplemented by our discovery tools. A room a parent adds shows \"Verification needed\" until three other parents have reviewed it. Details like opening hours and amenities may change, so please report anything that's wrong from the room's page and we'll keep the information up to date." }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I add rooms that aren't listed?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Absolutely! We rely on our community to help map parent rooms across Australia. Tap Share a room in the app, drop a pin, pick the amenities the room has, and add up to three photos. Photos are checked as you add them. Your room shows on the map straight away, marked \"Verification needed\" until three other parents review it." }
-          },
-          {
-            "@type": "Question",
-            "name": "What countries are supported?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We're currently focused on Australia, starting with major cities like Brisbane, Sydney, and Melbourne. We plan to expand to other countries based on community demand. Want us in your area? Let us know!" }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my data safe?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We take privacy seriously and comply with the Australian Privacy Act 1988. Your data is encrypted in transit and at rest, we only collect what's necessary, and we never sell your personal information. Read our full Privacy Policy for details." }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
-</head>
-<body class="page-home">
-
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <symbol id="i-stroller" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3v8h8a8 8 0 0 0-8-8z"/><path d="M3 6h2.5L7 11h14a7 7 0 0 1-7 6h-2a6 6 0 0 1-5.4-3.5"/><circle cx="8" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></symbol>
-    <symbol id="i-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="4" rx="1.5"/><path d="M6 14v6M18 14v6"/><circle cx="9" cy="6.5" r="2"/><path d="M12.5 7h5"/></symbol>
-    <symbol id="i-chair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"/><rect x="3" y="11" width="18" height="6" rx="2"/><path d="M6 17v3M18 17v3"/></symbol>
-    <symbol id="i-bottle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2.5h4"/><path d="M10.5 2.5V5L8 8v11.5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V8l-2.5-3V2.5"/><path d="M8 12h8"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
-    <symbol id="i-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path stroke-width="1.6" stroke-linejoin="round" d="M12 3.2 14.7 8.7 20.7 9.6 16.35 13.8 17.38 19.8 12 16.97 6.62 19.8 7.65 13.8 3.3 9.6 9.3 8.7Z"/></symbol>
-  </svg>
-
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- ===== Header ===== -->
-  <header class="header">
-    <div class="container header__inner">
-      <a href="/" class="brand" aria-label="Parents Room Finder home">
-        <img src="/images/app-icon-96.webp" alt="" width="36" height="36">
-        <span>Parents Room Finder</span>
-      </a>
-      <button class="header__hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="header__nav" id="site-nav" aria-label="Main">
-        <a href="/#features">Features</a>
-        <a href="/#how-it-works">How It Works</a>
-        <a href="/#faq">FAQ</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/#download" class="btn btn--ink btn--small">Download</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <!-- ===== Hero ===== -->
-    <section class="hero on-yellow" aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="eyebrow">For parents, by parents</p>
-          <h1 class="hero__title" id="hero-title">
-            <span class="hero__lead">Nappy <span class="nowrap"><mark class="hl">emergency</mark>?</span></span>
-            <span class="hero__line">Find the perfect parent room, anywhere.</span>
-          </h1>
-          <p class="hero__subtitle">Discover nearby nursing rooms, baby change facilities, and parent rooms with real photos, ratings, and details, all powered by our community of parents.</p>
-          <div class="hero__actions">
-            <a href="https://apps.apple.com/app/id6752860624" class="store-link">
-              <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="store-badge" width="161" height="54">
-            </a>
-            <p class="hero__note">Free, with no ads.</p>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Parents Room Finder | Android &amp; iPhone App</title>
+    <meta content="Find parent rooms, nursing rooms and baby change facilities near you across Australia. Free on Android and iPhone, with photos and reviews from parents." name="description"/>
+    <link href="https://parentsroom.app/" rel="canonical"/>
+    <meta content="#FFCC00" name="theme-color"/>
+    <meta content="light dark" name="color-scheme"/>
+    <meta content="app-id=6752860624" name="apple-itunes-app"/>
+    <meta content="website" property="og:type"/>
+    <meta content="Parents Room Finder" property="og:site_name"/>
+    <meta content="en_AU" property="og:locale"/>
+    <meta content="https://parentsroom.app/" property="og:url"/>
+    <meta content="Parents Room Finder | Android &amp; iPhone App" property="og:title"/>
+    <meta content="Find parent rooms, nursing rooms and baby change facilities near you across Australia. Free on Android and iPhone, with photos and reviews from parents." property="og:description"/>
+    <meta content="https://parentsroom.app/images/og-image.png" property="og:image"/>
+    <meta content="1200" property="og:image:width"/>
+    <meta content="630" property="og:image:height"/>
+    <meta content="Parents Room Finder: Nappy emergency? Find the nearest parents room quickly." property="og:image:alt"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="Parents Room Finder | Android &amp; iPhone App" name="twitter:title"/>
+    <meta content="Find parent rooms, nursing rooms and baby change facilities near you across Australia. Free on Android and iPhone, with photos and reviews from parents." name="twitter:description"/>
+    <meta content="https://parentsroom.app/images/og-image.png" name="twitter:image"/>
+    <link href="/favicon.ico" rel="icon" sizes="48x48"/>
+    <link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+    <link href="/site.webmanifest" rel="manifest"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Schibsted+Grotesk:wght@700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <script>document.documentElement.classList.add('js')</script>
+    <script type="application/ld+json">
+  { "@context": "https://schema.org", "@graph": [
+    {"@type": "WebSite", "@id": "https://parentsroom.app/#website", "url": "https://parentsroom.app/", "name": "Parents Room Finder", "alternateName": ["Parent Room Finder", "Parents Room"], "inLanguage": "en-AU", "publisher": {"@id": "https://parentsroom.app/#organization"}},
+    {"@type": "Organization", "@id": "https://parentsroom.app/#organization", "name": "Karmafy", "url": "https://parentsroom.app/"},
+    {
+      "@type": "MobileApplication",
+      "@id": "https://parentsroom.app/#app",
+      "name": "Parents Room Finder",
+      "alternateName": "Parent Room Finder",
+      "description": "Find parent rooms, nursing rooms and baby change facilities near you across Australia. Free on Android and iPhone, with photos and reviews from parents.",
+      "url": "https://parentsroom.app/",
+      "installUrl": ["https://apps.apple.com/app/id6752860624", "https://play.google.com/store/apps/details?id=com.karmafyapps.parentsroom"],
+      "sameAs": ["https://apps.apple.com/au/app/parents-room-finder-app/id6752860624", "https://play.google.com/store/apps/details?id=com.karmafyapps.parentsroom"],
+      "operatingSystem": ["Android", "iOS"],
+      "applicationCategory": "LifestyleApplication",
+      "countriesSupported": "AU",
+      "image": "https://parentsroom.app/images/app-icon-512.png",
+      "screenshot": ["https://parentsroom.app/images/screenshots/01-find-the-nearest-parents-room-720.webp", "https://parentsroom.app/images/screenshots/02-know-whats-inside-720.webp", "https://parentsroom.app/images/screenshots/03-reviews-from-real-parents-720.webp", "https://parentsroom.app/images/screenshots/04-saved-rooms-work-offline-720.webp", "https://parentsroom.app/images/screenshots/05-share-a-room-720.webp"],
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"},
+      "publisher": {"@id": "https://parentsroom.app/#organization"}
+    },
+    { "@type": "FAQPage", "@id": "https://parentsroom.app/#faq", "mainEntity": [
+      {"@type": "Question", "name": "Is Parents Room Finder available on Android and iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Parents Room Finder is available for Android on Google Play and for iPhone on the App Store. Both apps are free, with no ads."}},
+      {"@type": "Question", "name": "Is Parents Room Finder free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Parents Room Finder is completely free to use. You get the interactive map, room details, photos, reviews, and the ability to save favourites and share rooms, at no cost. If you'd like to support the app you can, but it doesn't unlock anything extra."}},
+      {"@type": "Question", "name": "How accurate is the room information?", "acceptedAnswer": {"@type": "Answer", "text": "Room information is contributed by our community of parents, supplemented by our discovery tools. A room a parent adds shows \"Verification needed\" until three other parents have reviewed it. Details like opening hours and amenities may change, so please report anything that's wrong from the room's page and we'll keep the information up to date."}},
+      {"@type": "Question", "name": "Can I add rooms that aren't listed?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely! We rely on our community to help map parent rooms across Australia. Tap Share a room in the app, drop a pin, pick the amenities the room has, and add up to three photos. Photos are checked as you add them. Your room shows on the map straight away, marked \"Verification needed\" until three other parents review it."}},
+      {"@type": "Question", "name": "What countries are supported?", "acceptedAnswer": {"@type": "Answer", "text": "We're currently focused on Australia, starting with major cities like Brisbane, Sydney, and Melbourne. We plan to expand to other countries based on community demand. Want us in your area? Let us know!"}},
+      {"@type": "Question", "name": "Is my data safe?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We take privacy seriously and comply with the Australian Privacy Act 1988. Your data is encrypted in transit and at rest, we only collect what's necessary, and we never sell your personal information. Read our full Privacy Policy for details."}}
+    ] }
+  ] }
+    </script>
+  </head>
+  <body class="page-home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header"><div class="container header__inner">
+        <a aria-label="Parents Room Finder home" class="brand" href="/"><img alt="" height="36" src="/images/app-icon-96.webp" width="36"/><span>Parents Room Finder</span></a>
+        <button aria-controls="site-nav" aria-expanded="false" aria-label="Menu" class="header__hamburger" type="button"><span></span><span></span><span></span></button>
+        <nav aria-label="Main" class="header__nav" id="site-nav">
+          <a href="/#features">Features</a>
+          <a href="/#how-it-works">How It Works</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a class="btn btn--ink btn--small" href="/#download">Download</a>
+        </nav>
+      </div></header>
+    <main id="main">
+      <section aria-labelledby="hero-title" class="hero on-yellow"><div class="container hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow">Now on Android and iPhone</p>
+            <h1 class="hero__title" id="hero-title"><span class="hero__lead">Nappy <span class="nowrap"><mark class="hl">emergency</mark>?</span></span><span class="hero__line">Find a parent room near you.</span></h1>
+            <p class="hero__subtitle">Find parent rooms, nursing rooms and baby change facilities across Australia. See photos, ratings and details shared by parents, with our free app for Android and iPhone.</p>
+            <div class="hero__actions">
+              <a class="store-link" href="https://apps.apple.com/app/id6752860624"><img alt="Download on the App Store" class="store-badge" height="54" src="/images/app-store-badge.svg" width="161"/></a><a class="store-link" href="https://play.google.com/store/apps/details?id=com.karmafyapps.parentsroom"><img alt="Get it on Google Play" class="store-badge" height="54" src="/images/google-play-badge.svg" width="182"/></a><p class="hero__note" style="flex-basis: 100%">Free, with no ads.</p>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="phone phone--back"><img alt="A room's page in the app, listing its change table, nursing chair, sink and nappy bin" decoding="async" height="866" sizes="(max-width: 880px) 200px, 250px" src="/images/screens/room-400.webp" srcset="/images/screens/room-400.webp 400w, /images/screens/room-800.webp 800w" width="400"/></div>
+            <div class="phone phone--front"><img alt="The app's map of nearby parents rooms, with the closest one a 3 minute walk away" fetchpriority="high" height="866" sizes="(max-width: 880px) 236px, 290px" src="/images/screens/explore-400.webp" srcset="/images/screens/explore-400.webp 400w, /images/screens/explore-800.webp 800w" width="400"/></div>
+            <div aria-hidden="true" class="float-mark"><svg><use href="/images/icons.svg#i-stroller"></use></svg></div>
+            <div aria-hidden="true" class="float-tag">3 min</div>
+          </div>
+        </div></section>
+      <section aria-labelledby="features-title" class="section features" id="features"><div class="container">
+          <div class="section-header reveal"><p class="eyebrow">Features</p><h2 id="features-title">Everything you need, right at your <mark class="hl">fingertips</mark></h2><p>Built by parents who know the struggle of finding a good parent room when you need one most.</p></div>
+          <div class="bento">
+            <article class="feature feature--wide tone-yellow reveal"><div class="feature__vig feature__vig--map"><img alt="" decoding="async" height="356" loading="lazy" sizes="(max-width: 760px) 100vw, 760px" src="/images/screens/map-600.webp" srcset="/images/screens/map-600.webp 600w, /images/screens/map-1170.webp 1170w" width="600"/></div>
+              <div class="feature__body"><h3>Find nearby rooms</h3><p>Location-based search finds parent rooms, nursing rooms, and baby change facilities near you instantly, with the walk or drive time to the closest one.</p></div></article>
+            <article class="feature tone-orange reveal"><div aria-hidden="true" class="feature__vig feature__vig--chips"><span class="ui-chip"><span class="ui-chip__ico"><svg><use href="/images/icons.svg#i-table"></use></svg></span>Change table</span><span class="ui-chip"><span class="ui-chip__ico"><svg><use href="/images/icons.svg#i-chair"></use></svg></span>Nursing chair</span><span class="ui-chip"><span class="ui-chip__ico"><svg><use href="/images/icons.svg#i-bottle"></use></svg></span>Bottle warmer</span></div>
+              <div class="feature__body"><h3>Know before you go</h3><p>Amenities, opening hours, and accessibility info for every room: change table, nursing chair, sink, bottle warmer and more, plus how to get in.</p></div></article>
+            <article class="feature tone-pink reveal"><div aria-hidden="true" class="feature__vig"><div class="ui-card ui-review"><span class="ui-stars"><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg></span><span class="ui-yn">Was it clean? <b>Yes</b></span><span class="ui-yn">Easy with a pram? <b>Yes</b></span></div></div>
+              <div class="feature__body"><h3>Community contributed</h3><p>Real photos, honest ratings, and helpful reviews from fellow parents who’ve been there. Was it clean? Easy with a pram?</p></div></article>
+            <article class="feature tone-teal reveal"><div aria-hidden="true" class="feature__vig feature__vig--stack"><span class="ui-pill"><svg><use href="/images/icons.svg#i-plane"></use></svg>No signal</span><span class="ui-row"><span class="ui-mark"><svg><use href="/images/icons.svg#i-stroller"></use></svg></span><span><b>Brisbane Arcade</b><small>Available offline</small></span></span></div>
+              <div class="feature__body"><h3>Save favourites</h3><p>Bookmark your go-to parent rooms for quick access whenever you need them. Their details, photos, and reviews stay on your phone, so they open even with no signal.</p></div></article>
+            <article class="feature tone-green reveal"><div aria-hidden="true" class="feature__vig"><span class="ui-toast"><span class="ui-tick"><svg><use href="/images/icons.svg#i-check"></use></svg></span><span><b>Thank you!</b><small>It’s on the map now.</small></span></span></div>
+              <div class="feature__body"><h3>Share a room you’ve used</h3><p>Help map parent rooms across Australia: drop a pin, pick the amenities the room had, and add a photo. It shows on the map straight away for the next parent.</p></div></article>
+            <article class="feature tone-indigo reveal"><div aria-hidden="true" class="feature__vig feature__vig--stack"><span class="ui-toast ui-toast--small"><span class="ui-tick"><svg><use href="/images/icons.svg#i-check"></use></svg></span>Photo checked</span><span class="ui-badge"><svg><use href="/images/icons.svg#i-clock"></use></svg>Verification needed</span></div>
+              <div class="feature__body"><h3>Checked by parents</h3><p>Every photo is checked as it’s added, to keep what you see helpful and safe for everyone. Rooms that parents add show “Verification needed” until other parents have reviewed them.</p></div></article>
+            <article class="feature feature--wide tone-purple reveal"><div aria-hidden="true" class="feature__vig feature__vig--chips"><span class="ui-chip"><span class="ui-chip__ico ui-chip__ico--ink"><svg><use href="/images/icons.svg#i-pin"></use></svg></span>Brisbane</span><span class="ui-chip"><span class="ui-chip__ico ui-chip__ico--ink"><svg><use href="/images/icons.svg#i-pin"></use></svg></span>Sydney</span><span class="ui-chip"><span class="ui-chip__ico ui-chip__ico--ink"><svg><use href="/images/icons.svg#i-pin"></use></svg></span>Melbourne</span><span class="ui-chip ui-chip--dashed"><span class="ui-chip__ico"><svg><use href="/images/icons.svg#i-plus"></use></svg></span>Your suburb?</span></div>
+              <div class="feature__body"><h3>Growing across Australia</h3><p>Starting in major cities like Brisbane, Sydney, and Melbourne, and expanding fast. Help us map every parent room in the country.</p></div></article>
+          </div>
+        </div></section>
+      <section aria-labelledby="how-title" class="section section--surface how-it-works" id="how-it-works"><div class="container">
+          <div class="section-header reveal"><p class="eyebrow">How it works</p><h2 id="how-title">Three <mark class="hl">simple</mark> steps</h2><p>Finding a parent room has never been easier.</p></div>
+          <ol class="steps">
+            <li class="step tone-yellow reveal"><span aria-hidden="true" class="step__number">1</span><h3>Open the app</h3><p>Your location is detected automatically, showing nearby parent rooms on the map. You don’t need an account to look around.</p></li>
+            <li class="step tone-orange reveal"><span aria-hidden="true" class="step__number">2</span><h3>Find a room</h3><p>Browse the closest rooms on the map or in a list. See photos, reviews, and amenities, then tap Take me there for directions.</p></li>
+            <li class="step tone-green reveal"><span aria-hidden="true" class="step__number">3</span><h3>Rate &amp; Share</h3><p>Help other parents by sharing your experience, photos, and tips about the rooms you visit.</p></li>
+          </ol>
+        </div></section>
+      <section aria-labelledby="screens-title" class="section screenshots" id="screenshots"><div class="container">
+          <div class="section-header reveal"><p class="eyebrow">See it in action</p><h2 id="screens-title">Designed for parents <mark class="hl">on the go</mark></h2><p>A simple, intuitive experience that makes finding parent rooms a breeze, even with a baby in one arm.</p></div>
+          <ul aria-label="App screenshots" class="shots reveal">
+            <li class="shot"><img alt="App screenshot - Find a parent room near you on the map" decoding="async" height="782" loading="lazy" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" src="/images/screenshots/01-find-the-nearest-parents-room-360.webp" srcset="/images/screenshots/01-find-the-nearest-parents-room-360.webp 360w, /images/screenshots/01-find-the-nearest-parents-room-720.webp 720w" width="360"/></li>
+            <li class="shot"><img alt="App screenshot - Check the amenities in a parent room: change table, nursing chair and sink" decoding="async" height="782" loading="lazy" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" src="/images/screenshots/02-know-whats-inside-360.webp" srcset="/images/screenshots/02-know-whats-inside-360.webp 360w, /images/screenshots/02-know-whats-inside-720.webp 720w" width="360"/></li>
+            <li class="shot"><img alt="App screenshot - Write and read reviews of parent rooms from real parents" decoding="async" height="782" loading="lazy" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" src="/images/screenshots/03-reviews-from-real-parents-360.webp" srcset="/images/screenshots/03-reviews-from-real-parents-360.webp 360w, /images/screenshots/03-reviews-from-real-parents-720.webp 720w" width="360"/></li>
+            <li class="shot"><img alt="App screenshot - Save your favourite rooms, with details, photos and reviews offline" decoding="async" height="782" loading="lazy" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" src="/images/screenshots/04-saved-rooms-work-offline-360.webp" srcset="/images/screenshots/04-saved-rooms-work-offline-360.webp 360w, /images/screenshots/04-saved-rooms-work-offline-720.webp 720w" width="360"/></li>
+            <li class="shot"><img alt="App screenshot - Contribute parent rooms to help the community" decoding="async" height="782" loading="lazy" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" src="/images/screenshots/05-share-a-room-360.webp" srcset="/images/screenshots/05-share-a-room-360.webp 360w, /images/screenshots/05-share-a-room-720.webp 720w" width="360"/></li>
+          </ul>
+        </div></section>
+      <section aria-labelledby="quotes-title" class="section section--surface testimonials" id="testimonials"><div class="container">
+          <div class="section-header reveal"><p class="eyebrow">What parents say</p><h2 id="quotes-title">Loved by <mark class="hl">families</mark> across Australia</h2></div>
+          <div class="quotes">
+            <figure class="quote reveal"><div aria-label="5 out of 5 stars" class="quote__stars" role="img"><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg></div>
+              <blockquote><p>“This app is a lifesaver! I was out shopping with my newborn and found a great nursing room I never knew existed. The photos helped me know exactly what to expect.”</p></blockquote>
+              <figcaption class="quote__author"><span aria-hidden="true" class="avatar tone-orange">A</span><span><strong>Andrew</strong><span>Brisbane</span></span></figcaption></figure>
+            <figure class="quote reveal"><div aria-label="5 out of 5 stars" class="quote__stars" role="img"><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg></div>
+              <blockquote><p>“As a dad, I often felt awkward asking where the parent room was. Now I just check the app and go. The community reviews are so helpful.”</p></blockquote>
+              <figcaption class="quote__author"><span aria-hidden="true" class="avatar tone-teal">S</span><span><strong>Sam</strong><span>Brisbane</span></span></figcaption></figure>
+            <figure class="quote reveal"><div aria-label="5 out of 5 stars" class="quote__stars" role="img"><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg><svg><use href="/images/icons.svg#i-star"></use></svg></div>
+              <blockquote><p>“I love that I can contribute and help other parents. We added a few rooms at our local shopping centre and it feels great to give back.”</p></blockquote>
+              <figcaption class="quote__author"><span aria-hidden="true" class="avatar tone-pink">A</span><span><strong>Amy</strong><span>Sydney</span></span></figcaption></figure>
+          </div>
+        </div></section>
+      <section aria-labelledby="faq-title" class="section faq" id="faq"><div class="container">
+          <div class="section-header reveal"><p class="eyebrow">FAQ</p><h2 id="faq-title">Frequently asked <mark class="hl">questions</mark></h2></div>
+          <div class="faq__list reveal">
+            <details class="faq__item"><summary>Is Parents Room Finder available on Android and iPhone?<span aria-hidden="true" class="faq__icon"><svg><use href="/images/icons.svg#i-plus"></use></svg></span></summary>
+              <div class="faq__answer"><p>Yes. Parents Room Finder is available for <a href="https://play.google.com/store/apps/details?id=com.karmafyapps.parentsroom">Android on Google Play</a> and for <a href="https://apps.apple.com/app/id6752860624">iPhone on the App Store</a>. Both apps are free, with no ads.</p></div></details>
+            <details class="faq__item"><summary>Is Parents Room Finder free to use?<span aria-hidden="true" class="faq__icon"><svg><use href="/images/icons.svg#i-plus"></use></svg></span></summary>
+              <div class="faq__answer"><p>Yes! Parents Room Finder is completely free to use. You get the interactive map, room details, photos, reviews, and the ability to save favourites and share rooms, at no cost. If you’d like to support the app you can, but it doesn’t unlock anything extra.</p></div></details>
+            <details class="faq__item"><summary>How accurate is the room information?<span aria-hidden="true" class="faq__icon"><svg><use href="/images/icons.svg#i-plus"></use></svg></span></summary>
+              <div class="faq__answer"><p>Room information is contributed by our community of parents, supplemented by our discovery tools. A room a parent adds shows “Verification needed” until three other parents have reviewed it. Details like opening hours and amenities may change, so please report anything that’s wrong from the room’s page and we’ll keep the information up to date.</p></div></details>
+            <details class="faq__item"><summary>Can I add rooms that aren’t listed?<span aria-hidden="true" class="faq__icon"><svg><use href="/images/icons.svg#i-plus"></use></svg></span></summary>
+              <div class="faq__answer"><p>Absolutely! We rely on our community to help map parent rooms across Australia. Tap Share a room in the app, drop a pin, pick the amenities the room has, and add up to three photos. Photos are checked as you add them. Your room shows on the map straight away, marked “Verification needed” until three other parents review it.</p></div></details>
+            <details class="faq__item"><summary>What countries are supported?<span aria-hidden="true" class="faq__icon"><svg><use href="/images/icons.svg#i-plus"></use></svg></span></summary>
+              <div class="faq__answer"><p>We’re currently focused on Australia, starting with major cities like Brisbane, Sydney, and Melbourne. We plan to expand to other countries based on community demand. Want us in your area? Let us know!</p></div></details>
+            <details class="faq__item"><summary>Is my data safe?<span aria-hidden="true" class="faq__icon"><svg><use href="/images/icons.svg#i-plus"></use></svg></span></summary>
+              <div class="faq__answer"><p>Yes. We take privacy seriously and comply with the Australian Privacy Act 1988. Your data is encrypted in transit and at rest, we only collect what’s necessary, and we never sell your personal information. Read our full <a href="/privacy.html">Privacy Policy</a> for details.</p></div></details>
+          </div>
+        </div></section>
+      <section aria-labelledby="cta-title" class="cta on-ink" id="download"><div class="container cta__inner reveal">
+          <img alt="Parents Room Finder app icon" class="cta__icon" decoding="async" height="140" loading="lazy" src="/images/app-icon-320.webp" width="140"/>
+          <h2 id="cta-title">Ready to find your nearest <mark class="hl">parent room</mark>?</h2>
+          <p>Download Parents Room Finder for Android on Google Play or for iPhone on the App Store. Find nearby parent rooms and make family outings easier.</p>
+          <div class="cta__actions">
+              <a class="store-link" href="https://apps.apple.com/app/id6752860624"><img alt="Download on the App Store" class="store-badge" height="54" loading="lazy" src="/images/app-store-badge-white.svg" width="161"/></a><a class="store-link" href="https://play.google.com/store/apps/details?id=com.karmafyapps.parentsroom"><img alt="Get it on Google Play" class="store-badge" height="54" loading="lazy" src="/images/google-play-badge.svg" width="182"/></a>
+            </div>
+        </div></section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <a class="brand" href="/"><img alt="" height="36" loading="lazy" src="/images/app-icon-96.webp" width="36"/><span>Parents Room Finder</span></a>
+            <p>Helping parents find clean, safe, and accessible parent rooms across Australia. Built with love by parents, for parents.</p>
+          </div>
+          <div>
+            <h2 class="footer__title">Navigation</h2>
+            <ul><li><a href="/#features">Features</a></li><li><a href="/#how-it-works">How It Works</a></li><li><a href="/#faq">FAQ</a></li><li><a href="/#download">Download</a></li></ul>
+          </div>
+          <div>
+            <h2 class="footer__title">Legal</h2>
+            <ul><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Use</a></li><li><a href="/delete-account.html">Delete Account</a></li></ul>
+          </div>
+          <div>
+            <h2 class="footer__title">Contact</h2>
+            <ul><li><a class="email-link" data-email-domain="karmafy.com.au" data-email-user="info" href="#">info at karmafy dot com dot au</a></li></ul>
           </div>
         </div>
-        <div class="hero__visual">
-          <div class="phone phone--back">
-            <img src="/images/screens/room-400.webp" srcset="/images/screens/room-400.webp 400w, /images/screens/room-800.webp 800w" sizes="(max-width: 880px) 200px, 250px" width="400" height="866" alt="A room's page in the app, listing its change table, nursing chair, sink and nappy bin" decoding="async">
-          </div>
-          <div class="phone phone--front">
-            <img src="/images/screens/explore-400.webp" srcset="/images/screens/explore-400.webp 400w, /images/screens/explore-800.webp 800w" sizes="(max-width: 880px) 236px, 290px" width="400" height="866" alt="The app's map of nearby parents rooms, with the closest one a 3 minute walk away" fetchpriority="high">
-          </div>
-          <div class="float-mark" aria-hidden="true"><svg><use href="#i-stroller"/></svg></div>
-          <div class="float-tag" aria-hidden="true">3 min</div>
-        </div>
+        <div class="footer__bottom"><span>© 2026 Karmafy. All rights reserved.</span><span>Made with care in Australia</span></div>
       </div>
-    </section>
-
-    <!-- ===== Features ===== -->
-    <section class="section features" id="features" aria-labelledby="features-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">Features</p>
-          <h2 id="features-title">Everything you need, right at your <mark class="hl">fingertips</mark></h2>
-          <p>Built by parents who know the struggle of finding a good parent room when you need one most.</p>
-        </div>
-        <div class="bento">
-          <article class="feature feature--wide tone-yellow reveal">
-            <div class="feature__vig feature__vig--map">
-              <img src="/images/screens/map-600.webp" srcset="/images/screens/map-600.webp 600w, /images/screens/map-1170.webp 1170w" sizes="(max-width: 760px) 100vw, 760px" width="600" height="356" alt="" loading="lazy" decoding="async">
-            </div>
-            <div class="feature__body">
-              <h3>Find nearby rooms</h3>
-              <p>Location-based search finds parent rooms, nursing rooms, and baby change facilities near you instantly, with the walk or drive time to the closest one.</p>
-            </div>
-          </article>
-          <article class="feature tone-orange reveal">
-            <div class="feature__vig feature__vig--chips" aria-hidden="true">
-              <span class="ui-chip"><span class="ui-chip__ico"><svg><use href="#i-table"/></svg></span>Change table</span>
-              <span class="ui-chip"><span class="ui-chip__ico"><svg><use href="#i-chair"/></svg></span>Nursing chair</span>
-              <span class="ui-chip"><span class="ui-chip__ico"><svg><use href="#i-bottle"/></svg></span>Bottle warmer</span>
-            </div>
-            <div class="feature__body">
-              <h3>Know before you go</h3>
-              <p>Amenities, opening hours, and accessibility info for every room: change table, nursing chair, sink, bottle warmer and more, plus how to get in.</p>
-            </div>
-          </article>
-          <article class="feature tone-pink reveal">
-            <div class="feature__vig" aria-hidden="true">
-              <div class="ui-card ui-review">
-                <span class="ui-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-                <span class="ui-yn">Was it clean? <b>Yes</b></span>
-                <span class="ui-yn">Easy with a pram? <b>Yes</b></span>
-              </div>
-            </div>
-            <div class="feature__body">
-              <h3>Community contributed</h3>
-              <p>Real photos, honest ratings, and helpful reviews from fellow parents who&rsquo;ve been there. Was it clean? Easy with a pram?</p>
-            </div>
-          </article>
-          <article class="feature tone-teal reveal">
-            <div class="feature__vig feature__vig--stack" aria-hidden="true">
-              <span class="ui-pill"><svg><use href="#i-plane"/></svg>No signal</span>
-              <span class="ui-row"><span class="ui-mark"><svg><use href="#i-stroller"/></svg></span><span><b>Brisbane Arcade</b><small>Available offline</small></span></span>
-            </div>
-            <div class="feature__body">
-              <h3>Save favourites</h3>
-              <p>Bookmark your go-to parent rooms for quick access whenever you need them. Their details, photos, and reviews stay on your phone, so they open even with no signal.</p>
-            </div>
-          </article>
-          <article class="feature tone-green reveal">
-            <div class="feature__vig" aria-hidden="true">
-              <span class="ui-toast"><span class="ui-tick"><svg><use href="#i-check"/></svg></span><span><b>Thank you!</b><small>It&rsquo;s on the map now.</small></span></span>
-            </div>
-            <div class="feature__body">
-              <h3>Share a room you&rsquo;ve used</h3>
-              <p>Help map parent rooms across Australia: drop a pin, pick the amenities the room had, and add a photo. It shows on the map straight away for the next parent.</p>
-            </div>
-          </article>
-          <article class="feature tone-indigo reveal">
-            <div class="feature__vig feature__vig--stack" aria-hidden="true">
-              <span class="ui-toast ui-toast--small"><span class="ui-tick"><svg><use href="#i-check"/></svg></span>Photo checked</span>
-              <span class="ui-badge"><svg><use href="#i-clock"/></svg>Verification needed</span>
-            </div>
-            <div class="feature__body">
-              <h3>Checked by parents</h3>
-              <p>Every photo is checked as it&rsquo;s added, to keep what you see helpful and safe for everyone. Rooms that parents add show &ldquo;Verification needed&rdquo; until other parents have reviewed them.</p>
-            </div>
-          </article>
-          <article class="feature feature--wide tone-purple reveal">
-            <div class="feature__vig feature__vig--chips" aria-hidden="true">
-              <span class="ui-chip"><span class="ui-chip__ico ui-chip__ico--ink"><svg><use href="#i-pin"/></svg></span>Brisbane</span>
-              <span class="ui-chip"><span class="ui-chip__ico ui-chip__ico--ink"><svg><use href="#i-pin"/></svg></span>Sydney</span>
-              <span class="ui-chip"><span class="ui-chip__ico ui-chip__ico--ink"><svg><use href="#i-pin"/></svg></span>Melbourne</span>
-              <span class="ui-chip ui-chip--dashed"><span class="ui-chip__ico"><svg><use href="#i-plus"/></svg></span>Your suburb?</span>
-            </div>
-            <div class="feature__body">
-              <h3>Growing across Australia</h3>
-              <p>Starting in major cities like Brisbane, Sydney, and Melbourne, and expanding fast. Help us map every parent room in the country.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== How It Works ===== -->
-    <section class="section section--surface how-it-works" id="how-it-works" aria-labelledby="how-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">How it works</p>
-          <h2 id="how-title">Three <mark class="hl">simple</mark> steps</h2>
-          <p>Finding a parent room has never been easier.</p>
-        </div>
-        <ol class="steps">
-          <li class="step tone-yellow reveal">
-            <span class="step__number" aria-hidden="true">1</span>
-            <h3>Open the app</h3>
-            <p>Your location is detected automatically, showing nearby parent rooms on the map. You don&rsquo;t need an account to look around.</p>
-          </li>
-          <li class="step tone-orange reveal">
-            <span class="step__number" aria-hidden="true">2</span>
-            <h3>Find a room</h3>
-            <p>Browse the closest rooms on the map or in a list. See photos, reviews, and amenities, then tap Take me there for directions.</p>
-          </li>
-          <li class="step tone-green reveal">
-            <span class="step__number" aria-hidden="true">3</span>
-            <h3>Rate &amp; Share</h3>
-            <p>Help other parents by sharing your experience, photos, and tips about the rooms you visit.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== App Screenshots ===== -->
-    <section class="section screenshots" id="screenshots" aria-labelledby="screens-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">See it in action</p>
-          <h2 id="screens-title">Designed for parents <mark class="hl">on the go</mark></h2>
-          <p>A simple, intuitive experience that makes finding parent rooms a breeze, even with a baby in one arm.</p>
-        </div>
-        <ul class="shots reveal" aria-label="App screenshots">
-          <li class="shot"><img src="/images/screenshots/01-find-the-nearest-parents-room-360.webp" srcset="/images/screenshots/01-find-the-nearest-parents-room-360.webp 360w, /images/screenshots/01-find-the-nearest-parents-room-720.webp 720w" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" width="360" height="782" alt="App screenshot - Find a parent room near you on the map" loading="lazy" decoding="async"></li>
-          <li class="shot"><img src="/images/screenshots/02-know-whats-inside-360.webp" srcset="/images/screenshots/02-know-whats-inside-360.webp 360w, /images/screenshots/02-know-whats-inside-720.webp 720w" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" width="360" height="782" alt="App screenshot - Check the amenities in a parent room: change table, nursing chair and sink" loading="lazy" decoding="async"></li>
-          <li class="shot"><img src="/images/screenshots/03-reviews-from-real-parents-360.webp" srcset="/images/screenshots/03-reviews-from-real-parents-360.webp 360w, /images/screenshots/03-reviews-from-real-parents-720.webp 720w" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" width="360" height="782" alt="App screenshot - Write and read reviews of parent rooms from real parents" loading="lazy" decoding="async"></li>
-          <li class="shot"><img src="/images/screenshots/04-saved-rooms-work-offline-360.webp" srcset="/images/screenshots/04-saved-rooms-work-offline-360.webp 360w, /images/screenshots/04-saved-rooms-work-offline-720.webp 720w" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" width="360" height="782" alt="App screenshot - Save your favourite rooms, with details, photos and reviews offline" loading="lazy" decoding="async"></li>
-          <li class="shot"><img src="/images/screenshots/05-share-a-room-360.webp" srcset="/images/screenshots/05-share-a-room-360.webp 360w, /images/screenshots/05-share-a-room-720.webp 720w" sizes="(min-width: 1024px) 224px, min(64vw, 300px)" width="360" height="782" alt="App screenshot - Contribute parent rooms to help the community" loading="lazy" decoding="async"></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== Testimonials ===== -->
-    <section class="section section--surface testimonials" id="testimonials" aria-labelledby="quotes-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">What parents say</p>
-          <h2 id="quotes-title">Loved by <mark class="hl">families</mark> across Australia</h2>
-        </div>
-        <div class="quotes">
-          <figure class="quote reveal">
-            <div class="quote__stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-            <blockquote><p>&ldquo;This app is a lifesaver! I was out shopping with my newborn and found a great nursing room I never knew existed. The photos helped me know exactly what to expect.&rdquo;</p></blockquote>
-            <figcaption class="quote__author"><span class="avatar tone-orange" aria-hidden="true">A</span><span><strong>Andrew</strong><span>Brisbane</span></span></figcaption>
-          </figure>
-          <figure class="quote reveal">
-            <div class="quote__stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-            <blockquote><p>&ldquo;As a dad, I often felt awkward asking where the parent room was. Now I just check the app and go. The community reviews are so helpful.&rdquo;</p></blockquote>
-            <figcaption class="quote__author"><span class="avatar tone-teal" aria-hidden="true">S</span><span><strong>Sam</strong><span>Brisbane</span></span></figcaption>
-          </figure>
-          <figure class="quote reveal">
-            <div class="quote__stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-            <blockquote><p>&ldquo;I love that I can contribute and help other parents. We added a few rooms at our local shopping centre and it feels great to give back.&rdquo;</p></blockquote>
-            <figcaption class="quote__author"><span class="avatar tone-pink" aria-hidden="true">A</span><span><strong>Amy</strong><span>Sydney</span></span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FAQ ===== -->
-    <section class="section faq" id="faq" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Frequently asked <mark class="hl">questions</mark></h2>
-        </div>
-        <div class="faq__list reveal">
-          <details class="faq__item">
-            <summary>Is Parents Room Finder free to use?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
-            <div class="faq__answer"><p>Yes! Parents Room Finder is completely free to use. You get the interactive map, room details, photos, reviews, and the ability to save favourites and share rooms, at no cost. If you&rsquo;d like to support the app you can, but it doesn&rsquo;t unlock anything extra.</p></div>
-          </details>
-          <details class="faq__item">
-            <summary>How accurate is the room information?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
-            <div class="faq__answer"><p>Room information is contributed by our community of parents, supplemented by our discovery tools. A room a parent adds shows &ldquo;Verification needed&rdquo; until three other parents have reviewed it. Details like opening hours and amenities may change, so please report anything that&rsquo;s wrong from the room&rsquo;s page and we&rsquo;ll keep the information up to date.</p></div>
-          </details>
-          <details class="faq__item">
-            <summary>Can I add rooms that aren&rsquo;t listed?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
-            <div class="faq__answer"><p>Absolutely! We rely on our community to help map parent rooms across Australia. Tap Share a room in the app, drop a pin, pick the amenities the room has, and add up to three photos. Photos are checked as you add them. Your room shows on the map straight away, marked &ldquo;Verification needed&rdquo; until three other parents review it.</p></div>
-          </details>
-          <details class="faq__item">
-            <summary>What countries are supported?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
-            <div class="faq__answer"><p>We&rsquo;re currently focused on Australia, starting with major cities like Brisbane, Sydney, and Melbourne. We plan to expand to other countries based on community demand. Want us in your area? Let us know!</p></div>
-          </details>
-          <details class="faq__item">
-            <summary>Is my data safe?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
-            <div class="faq__answer"><p>Yes. We take privacy seriously and comply with the Australian Privacy Act 1988. Your data is encrypted in transit and at rest, we only collect what&rsquo;s necessary, and we never sell your personal information. Read our full <a href="/privacy.html">Privacy Policy</a> for details.</p></div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Download CTA ===== -->
-    <section class="cta on-ink" id="download" aria-labelledby="cta-title">
-      <div class="container cta__inner reveal">
-        <img src="/images/app-icon-320.webp" alt="Parents Room Finder app icon" class="cta__icon" width="140" height="140" loading="lazy" decoding="async">
-        <h2 id="cta-title">Ready to find your nearest <mark class="hl">parent room</mark>?</h2>
-        <p>Download the app, make outings easier for everyone, and help map every parent room in Australia.</p>
-        <div class="cta__actions">
-          <a href="https://apps.apple.com/app/id6752860624" class="store-link">
-            <img src="/images/app-store-badge-white.svg" alt="Download on the App Store" class="store-badge" width="161" height="54" loading="lazy">
-          </a>
-          <!-- Google Play: add the official badge here once com.karmafyapps.parentsroom is live on Play.
-          <a href="https://play.google.com/store/apps/details?id=com.karmafyapps.parentsroom" class="store-link">
-            <img src="/images/google-play-badge.svg" alt="Get it on Google Play" class="store-badge" height="54" loading="lazy">
-          </a>
-          -->
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <a href="/" class="brand">
-            <img src="/images/app-icon-96.webp" alt="" width="36" height="36" loading="lazy">
-            <span>Parents Room Finder</span>
-          </a>
-          <p>Helping parents find clean, safe, and accessible parent rooms across Australia. Built with love by parents, for parents.</p>
-        </div>
-        <div>
-          <h2 class="footer__title">Navigation</h2>
-          <ul>
-            <li><a href="/#features">Features</a></li>
-            <li><a href="/#how-it-works">How It Works</a></li>
-            <li><a href="/#faq">FAQ</a></li>
-            <li><a href="/#download">Download</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="footer__title">Legal</h2>
-          <ul>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
-            <li><a href="/terms.html">Terms of Use</a></li>
-            <li><a href="/delete-account.html">Delete Account</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="footer__title">Contact</h2>
-          <ul>
-            <li><a class="email-link" href="#" data-email-user="info" data-email-domain="karmafy.com.au">info at karmafy dot com dot au</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span>&copy; 2026 Karmafy. All rights reserved.</span>
-        <span>Made with care in Australia</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/main.js" defer></script>
-</body>
+    </footer>
+    <script defer="" src="/js/main.js"></script>
+  </body>
 </html>
